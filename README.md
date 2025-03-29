@@ -9,7 +9,7 @@ GenerateAI is a project that leverages JavaScript and CSS to create AI-generated
 - [Usage](#usage)
 - [Features](#features)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## Installation
 

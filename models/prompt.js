@@ -12,6 +12,14 @@ const PromptSchema = new Schema({
   tag: {
     type: String,
     required: [true, 'Tag is required.'],
+  },
+  image: {
+    type: String,
+  },
+  likes: {
+    type: [Schema.Types.ObjectId],
+    ref: 'User',
+    default: []
   }
 });
 

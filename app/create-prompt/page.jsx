@@ -24,6 +24,7 @@ const CreatePrompt = () => {
           prompt: post.prompt,
           userId: session?.user.id,
           tag: post.tag,
+          image: post.image, // Assuming you want to send the image as well
         }),
       });
 

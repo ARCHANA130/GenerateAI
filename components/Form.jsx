@@ -45,6 +45,26 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
             className='form_input'
           />
         </label>
+        <label>
+          <span className='font-satoshi font-semibold text-base text-gray-700'>
+            Upload Image
+          </span>
+          <input
+            type='file'
+            accept='image/*'
+            onChange={(e) => {
+              const file = e.target.files[0];
+              if (file) {
+                const reader = new FileReader();
+                reader.onloadend = () => {
+                  setPost({ ...post, image: reader.result });
+                };
+                reader.readAsDataURL(file);
+              }
+            }}
+            className='form_input'
+          />
+        </label>
 
         <div className='flex-end mx-3 mb-5 gap-4'>
           <Link href='/' className='text-gray-500 text-sm'>
